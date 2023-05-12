@@ -1,0 +1,24 @@
+{% extends 'bases/base.html' %}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Commorbidities</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for data in data %}
+      <tr>
+        <th scope="row" >{{ data.identity_number }}</th>
+        <td>{{ data.full_name }}</td>
+        <td>{{ data.phone }}</td>
+        <td>{{ data.address }}</td>
+        <td>{{ data.commorbidities }}</td>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

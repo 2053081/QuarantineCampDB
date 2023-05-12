@@ -1,0 +1,30 @@
+{% extends 'bases/base.html' %}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Patient</th>
+        <th scope="col">PCR Test</th>
+        <th scope="col">Quick Test</th>
+        <th scope="col">SPO2</th>
+        <th scope="col">Respiratory</th>
+        <th scope="col">Warning</th>
+        <th scope="col">CT Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for result in result %}
+      <tr>
+        <th scope="row" >{{ result.date }}</th>
+        <td>{{ result.number }}</td>
+        <td>{{ result.pcr_test }}</td>
+        <td>{{ result.quick_test }}</td>
+        <td>{{ result.spo2 }}</td>
+        <td>{{ result.respiratory }}</td>
+        <td>{{ result.warning }}</td>
+        <td>{{ result.ct_value }}</td>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
